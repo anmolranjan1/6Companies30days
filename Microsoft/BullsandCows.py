@@ -9,7 +9,6 @@ class Solution:
             else:
                 bf[int(secret[i])]+=1
                 cf[int(guess[i])]+=1
-       # print(bf,cf)
         for i in range(10):
             c+=min(bf[i],cf[i])
         return  str(b)+"A"+str(c)+"B"

@@ -15,8 +15,6 @@ class Solution:
             if dp[i]>maxi:
                 maxi=max(maxi,dp[i])
                 max_ind=i
-        # print(dp)
-        # print(hash)
         temp=[]
         temp.append(nums[max_ind])
         while hash[max_ind]!=max_ind:
