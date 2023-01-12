@@ -7,4 +7,4 @@ class Solution:
             if x%num == 0:
                 return count
             count+=1
-        return -1
+        return -1       
