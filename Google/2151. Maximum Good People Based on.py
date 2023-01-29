@@ -1,0 +1,1 @@
+class Solution:maximumGood=lambda _,S:max(sum(C) for C in product(range(2),repeat=len(S)) if all(C[i]==0 or 2==S[i][j] or S[i][j]==C[j] for i,j in product(range(len(S)),repeat=2)))
