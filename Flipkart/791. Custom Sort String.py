@@ -5,4 +5,4 @@ class Solution:
             if i in T:
                 ans += (i * T.count(i)) 
                 T = T.replace(i, '')
-        return ans+Ts
+        return ans+T
