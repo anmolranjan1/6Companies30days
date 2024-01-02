@@ -5,9 +5,7 @@ class Solution:
             cnt2 = x // divisor2 * (divisor2 - 1) + x % divisor2
             cnt = x // divisor * (divisor - 1) + x % divisor
             return (
-                cnt1 >= uniqueCnt1
-                and cnt2 >= uniqueCnt2
-                and cnt >= uniqueCnt1 + uniqueCnt2
+                cnt1 >= uniqueCnt1 and cnt2 >= uniqueCnt2 and cnt >= uniqueCnt1 + uniqueCnt2
             )
 
         divisor = lcm(divisor1, divisor2)
