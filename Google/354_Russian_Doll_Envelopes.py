@@ -1,0 +1,22 @@
+from typing import List
+
+class Solution:
+    def maxEnvelopes(self, envelopes: List[List[int]]) -> int:
+        envelopes.sort(key=lambda x: (x[0], -x[1]))
+
+        ans = 0
+        dp = [0] * len(envelopes)
+
+        for e in envelopes:
+            l, r = 0, ans
+            while l < r:
+                m = (l + r) // 2
+                if dp[m] >= e[1]:
+                    r = m
+                else:
+                    l = m + 1
+            dp[l] = e[1]
+            if l == ans:
+                ans += 1
+
+        return ans
